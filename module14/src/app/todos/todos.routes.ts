@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 
 const filepath = path.join(__dirname, '../../../db/todos.json');
-const todosRoute = express.Router();
+export const todosRoute = express.Router();
 
 todosRoute.get('/', (req : Request, res : Response) => {
   const data = fs.readFileSync(filepath, { encoding: 'utf-8' });
@@ -16,3 +16,24 @@ todosRoute.get('/', (req : Request, res : Response) => {
       })
 
 })
+todosRoute.post('/create-todo', (req : Request, res : Response) => {
+  const {title,completed} = req.body;
+  console.log(title,completed);
+  res.send('wellcome to my app todos create-todo')
+})
+todosRoute.get('/:title',(req : Request, res : Response) => {
+  const {title,completed} = req.body;
+  console.log(title,completed);
+  res.send('wellcome to my app todos create-todo')
+});
+todosRoute.put('update-todo/:title',(req : Request, res : Response) => {
+  const {title,completed} = req.body;
+  console.log(title,completed);
+  res.send('wellcome to my app todos create-todo')
+});
+todosRoute.delete('delete-todo/:title',(req : Request, res : Response) => {
+  const {title,completed} = req.body;
+  console.log(title,completed);
+  res.send('wellcome to my app todos create-todo')
+});
+

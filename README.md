@@ -19,3 +19,37 @@ Download Node.js command
 # version move command 
     fnm use 22
 
+
+
+============= express strat ===============
+
+# folder create -> terminal open -> command 
+    npm init -y
+    (package.json file create)
+# typeScript install
+    npm i -D typescript
+    npm i -g typescript
+
+# express install 
+    npm i express
+
+# tsc install 
+    tsc --init
+
+# tsconfig.json file configer 
+    (jekhane typescript file gulo likhbo tar location)
+    "rootDir": "./src/", 
+
+    (jekhane javascript file gulo theke public hobe oitar location)
+
+# types express install
+    npm i --save-dev @types/express
+
+# compail command 
+    tsc
+    (tsc command deoyar por dist file a javascript file create hobe je gulo typescript file a code likhchi)
+
+# app run korar command 
+
+    node ./dist/app/app.js
+    node ./dist/app/server.js

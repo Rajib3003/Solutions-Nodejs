@@ -49,7 +49,21 @@ Download Node.js command
     tsc
     (tsc command deoyar por dist file a javascript file create hobe je gulo typescript file a code likhchi)
 
+    tsc -w 
+    (tsc -w dile all time compail hote thakbe, bar bar compail korte hobe na watch hoite thakbe)
+
 # app run korar command 
 
     node ./dist/app/app.js
     node ./dist/app/server.js
+
+# server restart every changeing
+    npm i -D nodemon
+    npm i -g nodemon 
+
+    ==== start command ===== 
+    nodemon ./dist/app/server.js
+
+# package.json script write 
+    "start": "nodemon ./dist/app/server.js",
+

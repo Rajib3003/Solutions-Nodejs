@@ -67,3 +67,6 @@ Download Node.js command
 # package.json script write 
     "start": "nodemon ./dist/app/server.js",
 
+# mongodb install command
+    npm i mongodb
+

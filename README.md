@@ -70,3 +70,15 @@ Download Node.js command
 # mongodb install command
     npm i mongodb
 
+# Localy mongoDB download and install all work 
+
+    google search -> mongodb download -> msi type download
+    normal install korte hobe 
+
+    google search -> mongodb shell download -> msi type download
+    normal install korte hobe 
+    envernoment path set korte hobe 
+    C:\Program Files\MongoDB\Server\8.0\bin
+
+    google search -> 
+    NoSQL Booster 

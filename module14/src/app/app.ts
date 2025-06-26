@@ -25,7 +25,7 @@ app.get('/',
 
 async (req : Request, res : Response, next: NextFunction) => {
   try {
-    console.log(helloworld);
+    
     res.send('wellcome to my app start')
   } catch (error) {
     next(error);
@@ -36,7 +36,7 @@ app.get('/error',
 
 async (req : Request, res : Response, next: NextFunction) => {
   try {
-     console.log(helloworld);
+     
     res.send('wellcome to error er duniya')
   } catch (error) {
     next(error);

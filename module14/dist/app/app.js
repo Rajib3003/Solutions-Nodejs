@@ -26,7 +26,6 @@ app.get('/', (req, res, next) => {
     next();
 }, (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(helloworld);
         res.send('wellcome to my app start');
     }
     catch (error) {
@@ -35,7 +34,6 @@ app.get('/', (req, res, next) => {
 }));
 app.get('/error', (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(helloworld);
         res.send('wellcome to error er duniya');
     }
     catch (error) {

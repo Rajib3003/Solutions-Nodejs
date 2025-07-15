@@ -26,3 +26,41 @@
     {_id: ObjectId("6406ad63fc13ae5a40000065")},
     {$set: { age: 45 }}
     )
+
+
+# MongoDB aggregation 
+db.test.aggregate([
+    {$match: {age: {$lt: 30},gender:"Female"}},
+    {$match: {gender:"Female"}},
+    {$addFields: {course:"myself"}},
+    {$project: {name:1,age:1,gender:1,course:1}},
+    {$limit: 5},
+    {$sort: {age: 1}},
+    {$merge: "test"},
+    {$count: "total"}
+    ])
+
+
+  db.test.aggregate([
+    {
+        $group:
+        {
+            _id: "null",
+            count: { $sum: 1 },
+            totalSalary: { $sum: "$salary" },
+            maxSalary: {$max: "$salary"},
+            minSalary: {$min: "$salary"},
+            avgSalary: {$avg: "$salary"}
+        }
+
+    },
+    {
+        $project: {
+            totalSalary: 1,
+            maxSalary:1,
+            minSalary:1,
+            avarageSalary:"$avgSalary",
+            subtrationSalary: {$subtract:["$maxSalary","$minSalary"]}
+        }
+    }
+  ])

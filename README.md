@@ -91,4 +91,6 @@ Download Node.js command
 
     ==> ts node dev search kore (ts-node-dev) this click . terminal (npm i ts-node-dev) this install
 
+    ==> mongoose documention ta valo kore porte hobe (mongoose-> Guides-> Schemas/ SchemaTypes etc.)
+
     

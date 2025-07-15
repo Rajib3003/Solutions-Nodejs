@@ -82,4 +82,13 @@ Download Node.js command
 
     google search -> 
     NoSQL Booster 
+
+# mongoes work start 
+    ==> first search diye side ta ber korte hobe , search dite hobe (mongoes) ta hole (Mongoose ODM v8.16.3) eita paoya jabe, this click. 
+    ==> aktu niche (quick start guide) this click
+
+    ==> uporer je likha gulo ache oi khan theke typescript, express, mongodb and mongoose gulo ke age install kore nite hobe. sathe are o kicho thakle oi gulo keo install kore nite hobe. 
+
+    ==> ts node dev search kore (ts-node-dev) this click . terminal (npm i ts-node-dev) this install
+
     

@@ -143,7 +143,7 @@ Download Node.js command
     
     ==> database ke valdation korar jonno zod use kora valo (npm install zod) . 1st valdation zod korbe 2nd valdation mongoose korbe.
 
-    ==> password ke cqured korar jonno bcrypt use korte hoy (npm i bcrypt)
+    ==> password ke Secure korar jonno bcrypt use korte hoy (npm i bcrypt) sathe eita o install korte hobe (npm i --save-dev @types/bcrypt)
 
 
     

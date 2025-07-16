@@ -69,4 +69,12 @@ const userSchema = new Schema<IUser>(
 }
 )
 
+userSchema.method(
+    'hashPassword',
+    function (password){
+        this.password = password;
+        return this.password;
+    }
+)
+
 export const User = model<IUser>('User', userSchema);

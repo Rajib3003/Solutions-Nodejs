@@ -3,6 +3,8 @@ import express, { Request, Response } from "express";
 import { User } from "../models/users.models";
 import { IUser } from "../interfaces/users.interface";
 import z from "zod";
+import bcrypt from "bcrypt";
+
 
 export const userRouters = express.Router();
 //zod validation 
@@ -21,7 +23,10 @@ userRouters.post('/create',async(req : Request, res : Response) => {
     
     // typeScript validation (IUser)
     // const body:IUser = await createUserZodSchema.parseAsync(req.body); // zod validation
-    const body:IUser = req.body; // zod validation
+    const body:IUser = req.body; 
+
+    const hashedPassword = await bcrypt.hash(body.password, 10);
+    console.log(hashedPassword, "hashed password");
     const user = await User.create(body)    
     res.status(201).json({
       success: true,

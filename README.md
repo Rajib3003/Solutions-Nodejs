@@ -130,7 +130,7 @@ Download Node.js command
     NoSQL Booster 
 
 # mongoes work start 
-    ==> first search diye side ta ber korte hobe , search dite hobe (mongoes) ta hole (Mongoose ODM v8.16.3) eita paoya jabe, this click. 
+    ==> first search diye side ta ber korte hobe , search dite hobe (mongoose) ta hole (Mongoose ODM v8.16.3) eita paoya jabe, this click. 
     ==> aktu niche (quick start guide) this click
 
     ==> uporer je likha gulo ache oi khan theke typescript, express, mongodb and mongoose gulo ke age install kore nite hobe. sathe are o kicho thakle oi gulo keo install kore nite hobe. 
@@ -139,8 +139,11 @@ Download Node.js command
 
     ==> mongoose documention ta valo kore porte hobe (mongoose-> Guides-> Schemas/ SchemaTypes etc.)
 
-    ==> email ba onno kicho valdation korte easy (npm i validator) eita install kore nile. sthe eita o install korte hobe(npm i --save-dev @types/validator)
+    ==> email ba onno kicho valdation korte easy (npm i validator) eita install kore nile. sathe eita o install korte hobe(npm i --save-dev @types/validator)
+    
+    ==> database ke valdation korar jonno zod use kora valo (npm install zod) . 1st valdation zod korbe 2nd valdation mongoose korbe.
 
+    ==> password ke cqured korar jonno bcrypt use korte hoy (npm i bcrypt)
 
 
     

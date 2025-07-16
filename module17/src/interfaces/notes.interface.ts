@@ -1,7 +1,8 @@
+import { Types } from "mongoose";
 
 export interface INote {
-    name: string;
-    age: number;
-    email: string;
-    date?: Date;
+    title: string;
+    description: string;
+    date: Date;
+    user: Types.ObjectId; // userId
 }

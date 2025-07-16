@@ -14,7 +14,7 @@ noteRouters.post('/create',async(req : Request, res : Response) => {
 
     // prossess-2
     const body = req.body;
-    const note = await Note.create(body)    
+    const note = await (await Note.create(body)).populate('user'); // userId
     res.status(201).json({
       success: true,
       message: 'note created successfully',

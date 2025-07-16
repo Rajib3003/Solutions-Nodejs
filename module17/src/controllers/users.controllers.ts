@@ -2,18 +2,42 @@
 import express, { Request, Response } from "express";
 import { User } from "../models/users.models";
 import { IUser } from "../interfaces/users.interface";
+import z from "zod";
 
 export const userRouters = express.Router();
+//zod validation 
+const createUserZodSchema = z.object({
+  firstName: z.string(),
+  lastName: z.string(),
+  age: z.number(),
+  email: z.string(),
+  password: z.string(),
+  role: z.enum(['ADMIN','USER','SUPERADMIN']).default('USER')
+})
 
 userRouters.post('/create',async(req : Request, res : Response) => {
 
-    const body:IUser = req.body;
+ try {
+    
+    // typeScript validation (IUser)
+    // const body:IUser = await createUserZodSchema.parseAsync(req.body); // zod validation
+    const body:IUser = req.body; // zod validation
     const user = await User.create(body)    
     res.status(201).json({
       success: true,
       message: 'user created successfully',
       user
     })  
+  
+ } catch (error) {
+  console.log(error,"zod error");
+  return res.status(400).json({
+    success: false,
+    message: 'zod error',
+    error
+  })
+ }
+
 })
 userRouters.get('/',async(req : Request, res : Response) => {    
     const users = await User.find()  

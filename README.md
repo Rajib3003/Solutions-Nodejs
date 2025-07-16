@@ -1,3 +1,49 @@
+# extensions installed name 
+    Auto Close Tag
+    Auto Complete Tag
+    Auto Import
+    Auto Rename Tag
+    Bootstrap 5 Quick Snippets
+    Cypress Tests for VSCode
+    Database Client JDBC
+    Debugger for Java
+    Dev Containers
+    ES7 React/Redux/GraphQL/React-Native snippets
+    Extension Pack for Java
+    FreeMarker
+    GitHub Copilot
+    GitHub Copilot Chat
+    GitLens-Git Supercharged
+    Gradle for Java
+    IntelliCode
+    IntelliCode API Usage Examples
+    Language Support for Java(TM by Red Hat)
+    Live Preview
+    Live Sass Compiller
+    Live server
+    Maven for Java
+    PHP Intelephense
+    PostgreSQL
+    prettler-code formtter
+    Project Manager for java
+    Pylance
+    Python
+    python Debugger
+    Python Environment Manager (deprecated)
+    Rainbow CSV
+    React Native Tools
+    Spring Boot Dasboard
+    Spring Boot EXtension Pack
+    Spring Boot Tools
+    Spring Initializr Java Support
+    Test Runner for Java
+    Thymeleaf HTML5 Snippets
+    Themeleaf Navigation
+    WSL
+    Red Hat Dependency Analytics
+    Windsurf Plugin (formerly Codeium): AI Coding Autocomplet
+
+
 Download Node.js command
 
 # Download and install fnm:
@@ -92,5 +138,9 @@ Download Node.js command
     ==> ts node dev search kore (ts-node-dev) this click . terminal (npm i ts-node-dev) this install
 
     ==> mongoose documention ta valo kore porte hobe (mongoose-> Guides-> Schemas/ SchemaTypes etc.)
+
+    ==> email ba onno kicho valdation korte easy (npm i validator) eita install kore nile. sthe eita o install korte hobe(npm i --save-dev @types/validator)
+
+
 
     

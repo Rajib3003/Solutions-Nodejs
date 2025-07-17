@@ -26,10 +26,9 @@ userRouters.post('/create',async(req : Request, res : Response) => {
     // const password = await user.hashPassword(body.password);   
     // user.password = password;
     // await user.save();
-    const password = await User.hashPassword(body.password);
-    console.log(password,"password");
-     body.password = password;
-    const user =await User.create(req.body);
+    // const password = await User.hashPassword(body.password);    
+    //  body.password = password;
+    const user =await User.create(body);
    
 
 

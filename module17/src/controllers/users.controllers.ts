@@ -22,10 +22,17 @@ userRouters.post('/create',async(req : Request, res : Response) => {
  try {   
    
     const body = req.body; 
-    const user = new User(body);
-    const password = await user.hashPassword(body.password);   
-    user.password = password;
-    await user.save();
+    // const user = new User(body);
+    // const password = await user.hashPassword(body.password);   
+    // user.password = password;
+    // await user.save();
+    const password = await User.hashPassword(body.password);
+    console.log(password,"password");
+     body.password = password;
+    const user =await User.create(req.body);
+   
+
+
     res.status(201).json({
       success: true,
       message: 'user created successfully',

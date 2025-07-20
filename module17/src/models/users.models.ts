@@ -67,7 +67,10 @@ const userSchema = new Schema<IUser, UserStaticMethods, UserIntenceMethods>(
     }
 },{
     timestamps: true,
-    versionKey: false
+    versionKey: false,
+    toJSON : {virtuals: true},
+    toObject : {virtuals: true}
+
 }
 );
 
@@ -80,10 +83,16 @@ userSchema.static("hashPassword", async function(plainPassword:string){
     return password;
 });
 
+userSchema.pre("find", async function(next){
+    console.log("doc output");
+    next();
+});
+
 userSchema.pre("save",async function(next){
   this.password =  await bcrypt.hash(this.password, 10);
     next();
 })
+
 userSchema.post("save",async function(doc,next){
   console.log('%s has been saved', doc._id);
     next();
@@ -94,6 +103,9 @@ userSchema.post("findOneAndDelete",async function(doc,next){
         await Note.deleteMany({ user: doc._id });
     }    
     next();
+})
+userSchema.virtual('fullName').get(function(){
+    return `${this.firstName} ${this.lastName}`;
 })
 
 export const User = model<IUser, UserStaticMethods>('User', userSchema);
